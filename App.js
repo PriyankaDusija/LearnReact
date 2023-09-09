@@ -1,9 +1,22 @@
-const heading = React.createElement("h1", {
-    id: "heading"
-}, "Hello World from React!");
+/**
+ * <div id="parent">
+ *      <div id="child">
+ *          <h1>I'm h1 tag</h1>
+ *      </div>
+ * </div>
+ */
 
-console.log(heading); //react object
+const parent = React.createElement("div", {
+        id: "parent"
+    },
+    React.createElement("div", {
+            id: "child"
+        },
+        React.createElement("h1", {},
+            "I'm an h1 tag")));
+
+console.log(parent);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading); //takes react object and created html element that browser understand and render it.  
+root.render(parent);
