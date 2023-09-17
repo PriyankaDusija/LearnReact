@@ -30,8 +30,11 @@ const parent = React.createElement("div", {
             ])
     ]);
 
+const jsxHeading = < h1 id = "heading" > Hello World using JSX!!! < /h1>
+console.log(jsxHeading);
+
 console.log(parent);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(jsxHeading);
